@@ -29,7 +29,7 @@
       },
       {
         "target": "simulation.html",
-        "source": "simulation/index.html",
+        "source": "simulation/simulation.html",
         "label": "Demo",
         "unit-type": "task",
         "content-type": "simulation"
