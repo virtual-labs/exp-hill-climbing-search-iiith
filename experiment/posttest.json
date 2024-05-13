@@ -53,38 +53,21 @@
       "difficulty": "intermediate"
     },
     {
-      "question": "Which of the following is a shortcoming of Hill Climbing?",
+      "question": "The heuristic value of a particular 8 queens configuration is 8. The Steepest Descent Hill Climbing algorithm generates 3 neighbouring states {a: 10, b:6, c:8}. If sideways move is allowed, which state would the algorithm go to next?",
       "answers": {
-        "a": "Getting trapped at local optima",
-        "b": "Getting trapped at a plateau",
-        "c": "",
-        "d": "Both (a) and (b)"
+        "a": "a",
+        "b": "b",
+        "c": "c",
+        "d": "None of the above, the algorithm terminates"
       },
       "explanations": {
         "a": "",
-        "b": "",
+        "b": "Steepest Descent algorithm always chooses the best (lowest) neighbour",
         "c": "",
-        "d": "It is not possible to determine the best direction to move in, when the current state is at a plateau"
-      },
-      "correctAnswer": "d",
-      "difficulty": "intermediate"
-    },
-    {
-      "question": "Which technique is used to overcome the problem of getting stuck at local optima in Hill Climbing?",
-      "answers": {
-        "a": "Sideways move",
-        "b": "Simulated Annealing",
-        "c": "Both (a) and (b)",
-        "d": "None of them"
-      },
-      "explanations": {
-        "a": "",
-        "b": "",
-        "c": "Side ways move and simulated annealing are two techniques used to overcome the problem of getting stuck at local maxima",
         "d": ""
       },
-      "correctAnswer": "c",
-      "difficulty": "advanced"
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
     },
     {
       "question": "In which scenario, Hill Climbing might be a good choice?",
@@ -102,8 +85,24 @@
       },
       "correctAnswer": "d",
       "difficulty": "advanced"
-    }
-    
+    },
+    {
+      "question": "The heuristic value of a particular 8 queens configuration is 10. The Steepest Descent Hill Climbing algorithm generates 3 neighbouring states {a: 10, b:12, c:14}. If sideways move is not allowed, which state would the algorithm go to next?",
+      "answers": {
+        "a": "a",
+        "b": "b",
+        "c": "c",
+        "d": "None of the above, the algorithm terminates"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "There is no lower valued successor for the algorithm to move to"
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    }   
 
   ]
 }

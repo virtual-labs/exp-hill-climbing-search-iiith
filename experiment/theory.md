@@ -3,6 +3,7 @@
 ## Introduction to Hill Climbing
 Hill climbing algorithm (steepest ascent) is a local search algorithm which continuously moves in the direction of increasing elevation/value to find the peak of the mountain or best solution to the problem. It terminates when it reaches a peak value where no neighbor has a higher value.
 It is also called greedy local search as it only looks to its good immediate neighbor state and not beyond that.The algorithm does not maintain a search tree, so the data structure for the current node need only record the state and the value of the objective function.
+The steepest descent algorithm is the opposite of the steepest ascent algorithm, where the algorithm moves in the direction of decreasing elevation/value to find the lowest point or best solution to the problem.
 
 
 ### N Queens Example
@@ -26,14 +27,15 @@ It is also called greedy local search as it only looks to its good immediate nei
 
 ### Disadvantages
 Though Basic Hill Climbing reaches a soluion quickly, it can often get stuck due to the following reasons:
-1. **Local Optima**: It may get stuck at a local optima and not reach the global optima. A local maximum is a peak that is higher than each of its neighboring states but lower than the global maximum. Hill-climbing algorithms that reach the
+1. **Local Optima**: It may get stuck at a local optima and not reach the global optima. A local optima is a peak that is higher than each of its neighboring states but lower than the global maximum. Hill-climbing algorithms that reach the
 vicinity of a local maximum will be drawn upward toward the peak but will then be stuck with nowhere else to go.
-2. **Ridges**: Ridges result in a sequence of local maxima
+2. **Ridges**: Ridges result in a sequence of local optima
 that is very difficult for greedy algorithms to navigate.
-3. **Plateaux**: It can be a flat local maximum, from which no uphill exit exists, or a **shoulder**, from which progress is possible. A hill-climbing search might get lost on the plateau.
+3. **Plateaux**: It can be a flat local optima, from which no uphill/downhill exit exists, or a **shoulder**, from which progress is possible. A hill-climbing search might get lost on the plateau.
 
 
 ![Hill](./images/hill.png)
+The above image corresponds to a steepest ascent hill climbing algorithm.
 
 **Sideways Move**: Basic Hill Climbing stops if it reaches a plateau where the best successor has the same value as the current state. A **sideways move** does not terminate in this case in the hope that the plateau is really a shoulder and a better state can be reached after more steos. This could however lead to an infinite loop.
 
@@ -48,7 +50,7 @@ state landscapes, it finds better solutions.
 
 ### Convergence and Optimality
 
-As explained above, Hill Climbing can converge to a local maxima instead of a global maxima. Numerous strategies have been developed to address this.
+As explained above, Hill Climbing can converge to a local optima instead of a global optima. Numerous strategies have been developed to address this.
 
 
 ## Pseudo Code
