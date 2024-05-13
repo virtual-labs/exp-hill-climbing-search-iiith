@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Add CSS at the head of HTML file -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+		integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/MotionPathPlugin.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+	<script type="text/javascript">
+		var isInstru = false;
+		var isInstrue = false;
+	</script>
+	<title>
+		Hill Climbing
+	</title>
+</head>
+
+<body onload="isPractice = false; NoQuestion = true;" style="padding-left: 150px;padding-right: 150px;padding-top: 20px;">
+	<div class="container">
+		<div class="columns is-centered">
+			<div class="column is-one-quarter v-instruction-title">
+				Tasks
+			</div>
+			<div class="column">
+				<div class="v-tabs">
+					<ul>
+						<li class="is-active" id="Task1">
+							<a>
+								Hill Climbing
+							</a>
+						</li>                            
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<div class="columns is-centered"
+			onclick="isInstru = !isInstru; if (isInstru) {document.getElementById('instruction-title').classList.add('v-collapsible-active'); document.getElementById('instructions').style.setProperty('max-height', '1020px', '');} else {document.getElementById('instruction-title').classList.remove('v-collapsible-active'); document.getElementById('instructions').style.removeProperty('max-height');}">
+			<div class="column">
+				<div class="v-collapsible-instruction-container v-instruction-container">
+					<div id="instruction-title" class="v-collapsible is-size-5">Instructions</div>
+					<div id="instructions" class="v-content"
+						style="text-align: left; padding-left: 5%; padding-right: 5%;">
+						<ul id="instruc" style="list-style: disc;">
+							<li><b>Start:</b> Initiates the simulation with the chosen settings. The default speed is
+								1x.</li>
+							<li><b>Speed Control:</b> Adjust the simulation speed using the slider provided.</li>
+							<li><b>Next:</b> Proceed to the next step in the simulation.</li>
+							<li><b>Reset:</b> Resume the simulation to its current state.</li>
+							<li><b>Grid Size:</b> Modify the grid size using the dropdown menu.</li>
+							<li><b>Animation:</b> The grid animates the current positions of the queens on the board.
+							</li>
+							<li><b>Color Coding:</b> The square to which the current move is being made is coloured
+								<span style="color:green;">Green</span>.
+							</li>
+							<li><b>Heuristic:</b> On each square in a particular column, the number represents the
+								heuristic value of the board if the queen in that column was moved to that position.
+							</li>
+							<li><b>Best Heuristic Value (BHV):</b>The best heuristic value out of all possible board
+								configurations.</li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap is-align-content-start">
+			<div id="control_container" class="column is-3-desktop is-12-tablet is-12-mobile">
+				<div class="v-datalist-container">
+					<div class="v-datalist-title">Controls</div>
+					<div id="controlls" class="v-datalist-row">
+						<div style="margin:5px 0px">
+							<div class="grid observe">
+								<form id="grid-size-form">
+									<label for="grid-size"> Grid Size :&nbsp;</label>
+									<select name="grid-sizes" id="grid-sizes">
+										<option value="81">8x8 (1)</option>
+										<option value="82">8x8 (2)</option>
+										<option value="83">8x8 (3)</option>
+										<option value="84">8x8 (4)</option>
+										<option value="85">8x8 (5)</option>
+										
+										<option value="61">6x6 (1)</option>
+										<option value="62">6x6 (2)</option>
+										<option value="63">6x6 (3)</option>
+										<option value="64">6x6 (4)</option>
+										<option value="65">6x6 (5)</option>
+
+										<option value="41">4x4 (1)</option>
+										<option value="42">4x4 (2)</option>
+										<option value="43">4x4 (3)</option>
+										<option value="44">4x4 (4)</option>
+										<option value="45">4x4 (5)</option>
+
+									</select>
+								</form>
+							</div>
+						</div>
+
+						<div style="margin:5px 0px">
+							<input id="side" type=checkbox>&nbsp;&nbsp;Sideways Move</button>
+						</div>
+
+						<div style="margin:5px 0px">
+							<button id="start" class="button" onclick="start();">Start</button>
+							<button id="next" class="button">Next</button>
+						</div>
+						<div style="margin:5px 0px">
+							<input id="auto" type=checkbox>&nbsp;&nbsp;AutoPlay</button>
+							<input id="autor" type="range" min="1" max="3" step="0.5" value="2" class="slider">
+						</div>
+						<div style="margin:5px 0px">
+							<button id="reset" class="button">Reset</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="canvas_container" class="column is-6-desktop is-12-tablet is-12-mobile">
+				<svg class="chessboard" style="width:100%; display:flex; margin-left:5px" oncontextmenu="return false;">
+				</svg>
+			</div>
+
+
+			<div id="info_container" class="column is-3-desktop is-12-tablet is-12-mobile">
+
+				<div class="v-datalist-container" style="padding-left: 5px;">
+					<div
+						onclick="isInstrue = !isInstrue; if (isInstrue) {document.getElementById('expl-title').classList.add('v-collapsible-active'); document.getElementById('explanation').style.setProperty('max-height', '1020px', '');} else {document.getElementById('expl-title').classList.remove('v-collapsible-active'); document.getElementById('explanation').style.removeProperty('max-height');}">
+						<div class="column">
+							<div class="v-collapsible-instruction-container v-instruction-container"
+								style="border: none;">
+								<div id="expl-title" class="v-collapsible is-size-5">Explanation</div>
+								<div id="explanation" class="v-content"
+									style="text-align: left; padding-left: 5%; padding-right: 5%; padding-top: 5%;">
+									<p id="expl">At every iteration, the heuristic value is calculated for every
+										possible
+										postion of the queen in a particular column for each column. The queen position
+										with the lowest heuristic value is then chosen to move to.
+										If multuple positions have the same value, a random position is chosen</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="v-datalist-container" style="padding-left: 5px; margin-top: 15px;">
+					<div class="v-datalist-title">Information</div>
+					<div id="info" class="v-datalist-row" style="text-align:left;">
+						<div style="margin:5px 0px">
+							<label><span
+									style="background-color:orange;">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;Iteration:&nbsp;</label><span
+								id="iteration-number"></span> <br>
+							<label><span style="background-color:green;">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;Best
+								Heuristic Value:&nbsp;</label><span id="heuristic-number"></span>
+						</div>
+					</div>
+				</div>
+
+				<div id="history_outer" class="v-datalist-container"
+					style="padding-left: 5px;margin-top: 20px;overflow-y: scroll;height: 200px;">
+					<div class="v-datalist-title">History</div>
+					<div id="history" class="v-datalist-row" style="text-align:center;">
+					</div>
+				</div>
+
+                <div id="Min" class="v-datalist-container" style="padding-left: 5px; margin-top: 15px;">
+                    <div class="v-datalist-title">Local Minima</div>
+                    <div id="min" class="v-datalist-row" style="text-align:left;">
+                        <div style="margin:5px 0px"> 
+							<p id="Minima"> </p>
+                        </div>
+                    </div>
+                </div>
+
+				<div id="QuestionBox" class="v-datalist-container" style="padding-left: 5px;margin-top: 20px;">
+                    <div class="v-datalist-title" style="color: red;" id="qoro" >Question</div>
+                    <div id="info" class="v-datalist-row" style="text-align:center;">
+                        <div style="margin:5px 0px">
+                            <p id="question">Question:</p>
+                        </div>
+                        <div id="submitform" style="margin:10px 0px">
+                                <label id="ans">Answer: </label><input id="answer" type="number" style="width:50px;"/><br>
+								<button style="margin-top: 2px;" class="button" onclick="submit(document.getElementById('answer').value);">Submit</button>
+                        </div>
+
+                        <div style="margin:5px 0px">
+                            <p id="Hint">Hint</p>
+                        </div>
+                    </div>
+                </div>
+				
+
+			</div>
+		</div>
+
+	<!-- Add JS at the bottom of HTML file -->
+	<script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
+	<script src="./js/main.js"></script>
+	<script src="./js/refresh.js"></script>
+	<script src="./js/question.js"></script>
+	<script src="./js/board.js"></script>
+</body>
+
+</html>
