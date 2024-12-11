@@ -1,0 +1,118 @@
+
+/home/runner/work/exp-hill-climbing-search-iiith/exp-hill-climbing-search-iiith/experiment/simulation/js/board.js
+    2:30  warning  'None' is not defined                        no-undef
+  167:29  warning  'seed' is assigned a value but never used    no-unused-vars
+  215:27  warning  'old_qp' is assigned a value but never used  no-unused-vars
+  246:18  warning  'svgElement' is defined but never used       no-unused-vars
+  247:21  warning  'isPractice' is not defined                  no-undef
+  259:13  warning  'isQuestion' is not defined                  no-undef
+  273:13  warning  'started' is not defined                     no-undef
+  292:14  warning  'NoQuestion' is not defined                  no-undef
+  296:14  warning  'isQuestion' is not defined                  no-undef
+  296:28  warning  'isAnswer' is not defined                    no-undef
+  300:16  warning  'side' is not defined                        no-undef
+  304:21  warning  'isStuck' is not defined                     no-undef
+  308:21  warning  'started' is not defined                     no-undef
+  325:20  warning  'chance' is not defined                      no-undef
+  326:13  warning  'isQuestion' is not defined                  no-undef
+  327:13  warning  'isAnswer' is not defined                    no-undef
+  329:17  warning  'question' is not defined                    no-undef
+  334:17  warning  'isQ1' is not defined                        no-undef
+  340:17  warning  'isQ2' is not defined                        no-undef
+  350:9   warning  'qrow' is not defined                        no-undef
+  351:9   warning  'qcol' is not defined                        no-undef
+  353:21  warning  'qrow' is not defined                        no-undef
+  353:27  warning  'qcol' is not defined                        no-undef
+  355:40  warning  'qcol' is not defined                        no-undef
+  355:49  warning  'qrow' is not defined                        no-undef
+  356:13  warning  'qrow' is not defined                        no-undef
+  356:21  warning  'qrow' is not defined                        no-undef
+  359:27  warning  'qrow' is not defined                        no-undef
+  359:38  warning  'qcol' is not defined                        no-undef
+  373:9   warning  'q2col' is not defined                       no-undef
+  376:9   warning  'q2row' is not defined                       no-undef
+  376:45  warning  'q2col' is not defined                       no-undef
+  377:27  warning  'q2row' is not defined                       no-undef
+  377:39  warning  'q2col' is not defined                       no-undef
+  415:9   warning  'updateValue' is not defined                 no-undef
+  449:9   warning  'started' is not defined                     no-undef
+  467:9   warning  'isQ1' is not defined                        no-undef
+  468:9   warning  'isQ2' is not defined                        no-undef
+  469:9   warning  'isQuestion' is not defined                  no-undef
+  470:9   warning  'isStuck' is not defined                     no-undef
+  472:9   warning  'next_count' is not defined                  no-undef
+  492:9   warning  'started' is not defined                     no-undef
+  494:9   warning  'size' is not defined                        no-undef
+  495:18  warning  'size' is not defined                        no-undef
+  496:9   warning  'size' is not defined                        no-undef
+  496:27  warning  'size' is not defined                        no-undef
+  497:21  warning  'size' is not defined                        no-undef
+  500:9   warning  'svgChessboard' is not defined               no-undef
+  505:9   warning  'svgChessboard' is not defined               no-undef
+  506:9   warning  'svgChessboard' is not defined               no-undef
+  507:32  warning  'svgChessboard' is not defined               no-undef
+  509:12  warning  'isPractice' is not defined                  no-undef
+  510:41  warning  'size' is not defined                        no-undef
+  511:31  warning  'svgChessboard' is not defined               no-undef
+  512:31  warning  'svgChessboard' is not defined               no-undef
+  513:13  warning  'agent' is not defined                       no-undef
+  516:41  warning  'size' is not defined                        no-undef
+  517:31  warning  'svgChessboard' is not defined               no-undef
+  518:31  warning  'svgChessboard' is not defined               no-undef
+  519:13  warning  'agent' is not defined                       no-undef
+  523:45  warning  'agent' is not defined                       no-undef
+  533:39  warning  'size' is not defined                        no-undef
+  549:8   warning  'isQ2' is not defined                        no-undef
+  550:9   warning  'ans2' is not defined                        no-undef
+
+/home/runner/work/exp-hill-climbing-search-iiith/exp-hill-climbing-search-iiith/experiment/simulation/js/main.js
+   3:5   warning  'qrow' is defined but never used                 no-unused-vars
+   4:5   warning  'qcol' is defined but never used                 no-unused-vars
+   5:5   warning  'isPractice' is assigned a value but never used  no-unused-vars
+   6:5   warning  'isStuck' is assigned a value but never used     no-unused-vars
+   8:5   warning  'q2row' is defined but never used                no-unused-vars
+   9:5   warning  'q2col' is defined but never used                no-unused-vars
+  17:10  warning  'start' is defined but never used                no-unused-vars
+  58:5   warning  'history_new' is not defined                     no-undef
+  64:26  warning  'history_new' is not defined                     no-undef
+
+/home/runner/work/exp-hill-climbing-search-iiith/exp-hill-climbing-search-iiith/experiment/simulation/js/question.js
+   2:5   warning  'isQuestion' is assigned a value but never used     no-unused-vars
+   3:5   warning  'isObservation' is assigned a value but never used  no-unused-vars
+   4:5   warning  'isAnswer' is assigned a value but never used       no-unused-vars
+   5:5   warning  'isQ1' is assigned a value but never used           no-unused-vars
+   6:5   warning  'isQ2' is assigned a value but never used           no-unused-vars
+  11:5   warning  'NoQuestion' is assigned a value but never used     no-unused-vars
+  13:5   warning  'chance' is assigned a value but never used         no-unused-vars
+  21:10  warning  'question' is defined but never used                no-unused-vars
+  30:10  warning  'submit' is defined but never used                  no-unused-vars
+  33:24  warning  'qcol' is not defined                               no-undef
+  33:29  warning  'size' is not defined                               no-undef
+  33:36  warning  'qrow' is not defined                               no-undef
+  80:10  warning  'ans2' is defined but never used                    no-unused-vars
+
+/home/runner/work/exp-hill-climbing-search-iiith/exp-hill-climbing-search-iiith/experiment/simulation/js/refresh.js
+   3:5   warning  'side' is assigned a value but never used  no-unused-vars
+  16:8   warning  'isStuck' is not defined                   no-undef
+  24:13  warning  'started' is not defined                   no-undef
+  31:25  warning  'isQuestion' is not defined                no-undef
+  32:29  warning  'next_count' is not defined                no-undef
+  33:29  warning  'agent' is not defined                     no-undef
+  33:44  warning  'svgChessboard' is not defined             no-undef
+  34:29  warning  'next_count' is not defined                no-undef
+  36:29  warning  'agent' is not defined                     no-undef
+  36:45  warning  'svgChessboard' is not defined             no-undef
+  37:29  warning  'next_count' is not defined                no-undef
+  53:9   warning  'started' is not defined                   no-undef
+  70:9   warning  'isQuestion' is not defined                no-undef
+  70:23  warning  'isObservation' is not defined             no-undef
+  79:9   warning  'ans_count' is not defined                 no-undef
+  79:27  warning  'ans2_count' is not defined                no-undef
+  83:6   warning  'isObservation' is not defined             no-undef
+  89:13  warning  'isQ1' is not defined                      no-undef
+  90:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  93:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  97:5   warning  'agent' is not defined                     no-undef
+
+✖ 107 problems (0 errors, 107 warnings)
+

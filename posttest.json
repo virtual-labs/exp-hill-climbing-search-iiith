@@ -1,0 +1,108 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Hill CLimbing is an example of which programming method",
+      "answers": {
+        "a": "Greedy",
+        "b": "Dynamic Programming",
+        "c": "Object-oriented programming",
+        "d": "None of them"
+      },
+      "explanations": {
+        "a": "Hill Climbing is a greedy algorithm, which always makes the choice that looks best at the moment.",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following is not a variant of hill climbing:",
+      "answers": {
+        "a": "Steepest Ascent",
+        "b": "Genetic algorithm",
+        "c": "Random Restart",
+        "d": "Stochastic"
+      },
+      "explanations": {
+        "a": "",
+        "b": "Genetic algorithm is not a variant of hill climbing",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following is true regarding Hill Climbing?",
+      "answers": {
+        "a": "Hill Climbing may get stuck at local optimas",
+        "b": "Hill climbing does not look ahead beyond the immediate neighbors of the current state",
+        "c": "Hill Climbing is not a complete algorithm",
+        "d": "All of the above"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "All of the above statements are true"
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "The heuristic value of a particular 8 queens configuration is 8. The Steepest Descent Hill Climbing algorithm generates 3 neighbouring states {a: 10, b:6, c:8}. If sideways move is allowed, which state would the algorithm go to next?",
+      "answers": {
+        "a": "a",
+        "b": "b",
+        "c": "c",
+        "d": "None of the above, the algorithm terminates"
+      },
+      "explanations": {
+        "a": "",
+        "b": "Steepest Descent algorithm always chooses the best (lowest) neighbour",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "In which scenario, Hill Climbing might be a good choice?",
+      "answers": {
+        "a": "When the search space is continuous and smooth",
+        "b": "When the objective function is non differentiable",
+        "c": "When the objective function has many peaks and valleys",
+        "d": "When the search space is discrete and has a well defined structure"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "Hill Climbing converges quickly when the search space is discrete and has a well defined structure"
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "The heuristic value of a particular 8 queens configuration is 10. The Steepest Descent Hill Climbing algorithm generates 3 neighbouring states {a: 10, b:12, c:14}. If sideways move is not allowed, which state would the algorithm go to next?",
+      "answers": {
+        "a": "a",
+        "b": "b",
+        "c": "c",
+        "d": "None of the above, the algorithm terminates"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "There is no lower valued successor for the algorithm to move to"
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    }   
+
+  ]
+}

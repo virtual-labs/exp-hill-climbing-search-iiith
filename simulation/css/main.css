@@ -1,0 +1,63 @@
+/* You CSS goes in here */
+.grid select {
+  background-color:rgb(134, 221, 124);
+  width: 100px;
+  border: none;
+  font-size: 18px;
+  /* -webkit-appearance: button;
+  appearance: button; */
+  outline: none;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+
+.grid:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.grid select option {
+  padding: 30px;
+}
+
+.fa-solid {
+  font-size: 1.2em;
+  color: blue;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 6px;
+  flex: auto;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.title {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  margin: 4%;
+}
+
+.it, .heuristic {
+  margin: 4px;
+  margin-right: 2%;
+}
+
+@media only screen and (max-width: 768px) {
+  html, body, .row {
+     margin-left:0 !important;
+     margin-right:0 !important;
+     padding-left:0 !important;
+     padding-right:0 !important;
+  }
+}
+
+@media only screen and (max-width: 1547px) {
+  html, body, .row {
+     margin-left:0 !important;
+     margin-right:0 !important;
+     padding-left:0 !important;
+     padding-right:0 !important;
+  }
+}
+  
