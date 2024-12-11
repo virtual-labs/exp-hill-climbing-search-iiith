@@ -2,23 +2,6 @@
     "version": 2.0,
     "questions": [
       {
-        "question": "What is the primary advantage of hill climbing?",
-        "answers": {
-          "a": "They always find the global optimum",
-          "b": "They can solve any optimisation problem efficiently",
-          "c": "They are easy to implement and requrie minimal computational resources",
-          "d": "None of the above "
-        },
-        "explanations": {
-          "a": "",
-          "b": "",
-          "c": "Hill climbing is a simple optimization algorithm that is easy to implement and understand.",
-          "d": ""
-        },
-        "correctAnswer": "c",
-        "difficulty": "beginner"
-      },
-      {
         "question": "In hill climbing, what does the term plateau refer to?",
         "answers": {
           "a": "A region with constant value",
@@ -50,9 +33,8 @@
           "d": ""
         },
         "correctAnswer": "a",
-        "difficulty": "intermediate"
-      },  
-
+        "difficulty": "beginner"
+      },
       {
         "question": "What is the main drawback of basic hill climbing algorithms?",
         "answers": {
@@ -71,6 +53,23 @@
         "difficulty": "intermediate"
       },  
       {
+        "question": "What is the primary advantage of stochastic hill climbing over simple hill climbing?",
+        "answers": {
+          "a": "It guarantees finding the global optimum.",
+          "b": "It can escape local optima by considering random moves.",
+          "c": "It requires no heuristic function.",
+          "d": "None of the above"
+        },
+        "explanations": {
+          "a": "",
+          "b": "Stochastic hill climbing introduces randomness, which helps it escape local optima and explore the search space more effectively.",
+          "c": "",
+          "d": ""
+        },
+        "correctAnswer": "b",
+        "difficulty": "intermediate"
+      }, 
+      {
         "question": "Which hill climbing variant is characterized by periodically restarting the search from a random initial state?",
         "answers": {
           "a": "Simple Hill Climbing",
@@ -85,7 +84,7 @@
           "d": ""
         },
         "correctAnswer": "d",
-        "difficulty": "intermediate"
+        "difficulty": "advanced"
       },
       {
         "question": "Which term best describes the process of hill climbing?",

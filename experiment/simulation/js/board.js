@@ -28,8 +28,10 @@ class NQueens {
         const container_size = chessboard.getBoundingClientRect().width;
         const squareSize = container_size / (this.size);
 
+    
         for (let y = 0; y < this.size; y++) {
             for (let x = 0; x < this.size; x++) {
+                
                 const square = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
                 square.setAttribute('x', x * squareSize);
                 square.setAttribute('y', y * squareSize);
@@ -38,6 +40,14 @@ class NQueens {
                 square.setAttribute('fill', (x + y) % 2 === 0 ? '#eeeeee' : '#5b5b5b');
 
                 svgElement.appendChild(square);
+                const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                text.setAttribute('x', x * squareSize + 5);
+                text.setAttribute('y', y * squareSize + 20);
+                text.setAttribute('font-size', '12px');
+                text.setAttribute('fill', (x + y) % 2 === 0 ? '#5b5b5b' : '#eeeeee');
+                text.textContent = `(${y},${x})`;
+                svgElement.appendChild(text);
+
             }
         }
         // console.log(question)
@@ -127,14 +137,18 @@ class NQueens {
             .then(svgData => {
                 const parser = new DOMParser();
                 const queenSvg = parser.parseFromString(svgData, 'image/svg+xml').querySelector('svg');
-                queenSvg.setAttribute('width', squareSize); // Adjust queen size as needed
+                queenSvg.setAttribute('width', squareSize); 
                 queenSvg.setAttribute('height', squareSize);
 
+            
                 this.board.forEach((row, col) => {
                     // console.log(row, col)
+                    //center the queens in the squares
+                    
                     const queenElement = queenSvg.cloneNode(true);
                     queenElement.setAttribute('x', col * squareSize);
                     queenElement.setAttribute('y', row * squareSize);
+                
                     svgElement.appendChild(queenElement);
                 });
             });
