@@ -1,39 +1,108 @@
 {
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+    "version": 2.0,
+    "questions": [
+      {
+        "question": "In hill climbing, what does the term plateau refer to?",
+        "answers": {
+          "a": "A region with constant value",
+          "b": "A region where multiple uphill directions exist",
+          "c": "A region with no uphill direction",
+          "d": "A region with no downhill direction"
+        },
+        "explanations": {
+          "a": "A plateau is a region where the value of the objective function remains constant.",
+          "b": "",
+          "c": "",
+          "d": ""
+        },
+        "correctAnswer": "a",
+        "difficulty": "beginner"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      {
+        "question": "What does the term hill climbing in the steepest ascent hill climbing imply about the movement through the search space?",
+        "answers": {
+          "a": "Movement is always upwards towards higher values.",
+          "b": "Movement is always downwards towards lower values.",
+          "c": "Movement is restricted to horizontal shifts only.",
+          "d": "Movement can be in any direction"
+        },
+        "explanations": {
+          "a": "Movement in steepest ascent hill climbing is in the upward direction towards higher values.",
+          "b": "",
+          "c": "",
+          "d": ""
+        },
+        "correctAnswer": "a",
+        "difficulty": "beginner"
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+      {
+        "question": "What is the main drawback of basic hill climbing algorithms?",
+        "answers": {
+          "a": "They require a more complex implementation.",
+          "b": "They often converge to a local optimum.",
+          "c": "They lack the ability to explore the search space effectively.",
+          "d": "Both (b) and (c)"
+        },
+        "explanations": {
+          "a": "",
+          "b": "",
+          "c": "",
+          "d": "Hill Climbing often converges to a local optimum and may not find the global optimum."
+        },
+        "correctAnswer": "d",
+        "difficulty": "intermediate"
+      },  
+      {
+        "question": "What is the primary advantage of stochastic hill climbing over simple hill climbing?",
+        "answers": {
+          "a": "It guarantees finding the global optimum.",
+          "b": "It can escape local optima by considering random moves.",
+          "c": "It requires no heuristic function.",
+          "d": "None of the above"
+        },
+        "explanations": {
+          "a": "",
+          "b": "Stochastic hill climbing introduces randomness, which helps it escape local optima and explore the search space more effectively.",
+          "c": "",
+          "d": ""
+        },
+        "correctAnswer": "b",
+        "difficulty": "intermediate"
+      }, 
+      {
+        "question": "Which hill climbing variant is characterized by periodically restarting the search from a random initial state?",
+        "answers": {
+          "a": "Simple Hill Climbing",
+          "b": "Steepest Ascent Hill Climbing",
+          "c": "Stochastic Hill Climbing",
+          "d": "Random Restart"
+        },
+        "explanations": {
+          "a": "",
+          "b": "",
+          "c": "",
+          "d": ""
+        },
+        "correctAnswer": "d",
+        "difficulty": "advanced"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
-}
+      {
+        "question": "Which term best describes the process of hill climbing?",
+        "answers": {
+          "a": "Exploring the entire search space exhaustively to find the optimal solution",
+          "b": "Incrementally improving the current solution",
+          "c": "Randomly selecting a solution from the search space",
+          "d": "None of the above"
+        },
+        "explanations": {
+          "a": "",
+          "b": "Hill climbing is an optimization algorithm that starts with a random solution and iteratively makes small changes to the solution to improve it",
+          "c": "",
+          "d": ""
+        },
+        "correctAnswer": "b",
+        "difficulty": "advanced"
+      }
+      
+    ]
+  }
